@@ -5,12 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/mystyles.css' %}">
-    <title>Picture</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    <title>Document</title>
 </head>
 <body>
-    <h1>Picture</h1>
+    
+    <h1>Hi Welcome To Django</h1>
+    <h2>Here are your access records</h2>
 
-    <img src="{% static 'images/navy.jpg' %}" alt="Navy">
+    <div class="djangtwo">
+        {% if access_records %}
+        <table>
+            <thead>
+                <th>Site Name</th>
+                <th>Date Accessed</th>
+            </thead>
+            <tbody>
+                {% for acc in access_records %}
+                <tr>
+                    <td>{{ acc.name }}</td>
+                    <td>{{ acc.date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No Access Records Found</p>
+        {% endif %}
+
+    </div>
+
 </body>
 </html>
