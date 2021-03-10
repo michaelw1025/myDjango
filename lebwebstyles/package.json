@@ -1,0 +1,23 @@
+{
+  "name": "lebwebstyles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-js": "webpack --mode production",
+    "build-css": "tailwind build assets/css/tailwind.css -o static/style.css && cleancss -o static/style.min.css static/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.24.4",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "clean-css-cli": "^5.2.1",
+    "jquery": "^3.6.0",
+    "tailwindcss": "^2.0.3"
+  }
+}
