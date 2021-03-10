@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build-js": "webpack --mode production",
-    "build-css": "tailwind build assets/css/tailwind.css -o static/style.css && cleancss -o static/style.min.css static/style.css"
+    "build-tailwind": "postcss assets/css/tailwind.css -o assets/css/tailwind-dist.css",
+    "build-css": "tailwind build assets/css/tailwind-dist.css -o static/style.css && cleancss -o static/style.min.css static/style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
     "webpack": "^5.24.4",
     "webpack-cli": "^4.5.0"
   },
