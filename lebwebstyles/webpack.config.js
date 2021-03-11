@@ -2,9 +2,13 @@ const copyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './assets/js/index.js',  // path to our input file
+  entry: {
+    main: './assets/js/index.js',
+    jquery: './assets/js/load-jquery.js',
+    charts: './assets/js/load-charts.js'
+  },  
   output: {
-    filename: 'main.js',  // output bundle file name
+    filename: '[name].js',  // output bundle file name
     path: path.resolve(__dirname, './static'),  // path to our Django static directory
   },
   plugins: [
