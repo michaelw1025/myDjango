@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+
+
+{% block title %}{{ block.super }} Admin{% endblock %}
+
+{% block navigation %}
+{% include "core/main-nav.html" with user="Jane Doe" position="Admin" %}
+{% endblock %}
+
+
+{% block content %}
+{% include "administrators/admin-card-deck.html" %}
+{% endblock %}

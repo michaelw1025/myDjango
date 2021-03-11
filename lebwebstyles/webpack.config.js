@@ -1,3 +1,4 @@
+const copyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -6,4 +7,12 @@ module.exports = {
     filename: 'main.js',  // output bundle file name
     path: path.resolve(__dirname, './static'),  // path to our Django static directory
   },
+  plugins: [
+    new copyWebpackPlugin({
+      patterns: [
+        {from: 'node_modules/@fortawesome/fontawesome-free/webfonts', to: 'webfonts'},
+        {from: 'node_modules/@fortawesome/fontawesome-free/css/', to: 'css'},
+      ],
+    }),
+  ],
 };
