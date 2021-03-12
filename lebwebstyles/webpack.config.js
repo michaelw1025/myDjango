@@ -3,9 +3,9 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    main: './assets/js/index.js',
-    jquery: './assets/js/load-jquery.js',
-    charts: './assets/js/load-charts.js'
+    lebweb: './assets/js/index.js',
+    // jquery: './assets/js/load-jquery.js',
+    // charts: './assets/js/load-charts.js'
   },  
   output: {
     filename: '[name].js',  // output bundle file name

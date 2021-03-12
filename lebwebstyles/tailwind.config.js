@@ -2,8 +2,8 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   future: {
-      removeDeprecatedGapUtilities: true,
-      purgeLayersByDefault: true,
+      removeDeprecatedGapUtilities: false,
+      purgeLayersByDefault: false,
   },
   purge: {
       enabled: false, //true for production build

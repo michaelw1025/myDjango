@@ -1,4 +1,11 @@
 /*!
+ * Chart.js v2.9.4
+ * https://www.chartjs.org
+ * (c) 2020 Chart.js Contributors
+ * Released under the MIT License
+ */
+
+/*!
  * Sizzle CSS Selector Engine v2.3.6
  * https://sizzlejs.com/
  *
@@ -8,3 +15,7 @@
  *
  * Date: 2021-02-16
  */
+
+//! moment.js
+
+//! moment.js locale configuration
