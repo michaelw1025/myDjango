@@ -22,7 +22,7 @@ STATIC_DIR = BASE_DIR/'static'
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xg7q38k54v*ktg%wig-m@lqaxpudbwtgl%(u_#o1h2$wlecboj'
+SECRET_KEY = 'u3ffttuc-04t(8f=p20l+a9#dink-5e*a!jb&whh=jop@^-4ia'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'core',
     'landing',
     'administrators',
-    'humanresources',
 ]
 
 MIDDLEWARE = [

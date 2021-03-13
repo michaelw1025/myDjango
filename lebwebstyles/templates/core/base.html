@@ -5,27 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/all.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
-    <script src="{% static 'lebweb.js' %}"></script>
-    <title>{% block title %}LebWeb{% endblock %}</title>
+    <!-- <script src="{% static 'jquerybundle.js' %}"></script> -->
+    <script src="{% static 'fontawesome.js' %}"></script>
+    <script src="{% static 'charts.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Document</title>
 </head>
 <body class="font-roboto">
     <div class="h-full w-full">
 
-        {% block navigation %}
-        {% endblock %}
-
-        {% block content %}
-        {% endblock %}
-
-        {% block homegraphs %}
-        {% endblock %}
+    {% block main-nav %}
+    {% endblock %}
+    
+    {% block content %}
+    {% endblock %}
 
     </div>
 
-    
+
+    <script src="{% static 'indexbundle.js' %}"></script>
 </body>
 </html>

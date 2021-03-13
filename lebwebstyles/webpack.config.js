@@ -1,22 +1,20 @@
-const copyWebpackPlugin = require('copy-webpack-plugin');
+var webpack = require("webpack");
 const path = require('path');
 
 module.exports = {
-  entry: {
-    lebweb: './assets/js/index.js',
-    // jquery: './assets/js/load-jquery.js',
-    // charts: './assets/js/load-charts.js'
-  },  
+  entry:{
+    indexbundle: './assets/index.js',
+    fontawesome: './assets/fontawesome.js',
+    charts: './assets/charts.js'
+  }, 
   output: {
     filename: '[name].js',  // output bundle file name
     path: path.resolve(__dirname, './static'),  // path to our Django static directory
   },
   plugins: [
-    new copyWebpackPlugin({
-      patterns: [
-        {from: 'node_modules/@fortawesome/fontawesome-free/webfonts', to: 'webfonts'},
-        {from: 'node_modules/@fortawesome/fontawesome-free/css/', to: 'css'},
-      ],
-    }),
-  ],
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+     })
+  ]
 };
